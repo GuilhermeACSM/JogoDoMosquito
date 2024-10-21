@@ -22,8 +22,8 @@ function randomizaPosicao(){
     let mosquito = document.createElement('imagem')
     mosquito.src = '../img/mosquito.png'
     mosquito.className = 'mosquito1'
-	mosquito.style.left = posicaoX + 'px'
-	mosquito.style.top = posicaoY + 'px'
+	mosquito.style.left = `${posicaoX}px`
+	mosquito.style.top = `${posicaoY}px`
 	mosquito.style.position = 'absolute'
     
     document.body.appendChild(mosquito)
