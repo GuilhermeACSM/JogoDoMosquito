@@ -1,0 +1,18 @@
+* {
+    width: 0px;
+    margin: 0px;
+    height: 0px;
+    cursor: url('../img/mata_mosquito.png'), auto;
+}
+
+body {
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.mosquito1 {
+    width: 80px;
+    height: 80px;
+}
