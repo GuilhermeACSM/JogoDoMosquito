@@ -6,15 +6,18 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Jogo do Mosquito</title>
 </head>
-<body onresize="ajustaTamanhoTela()">
+<body onload="iniciarJogo()">
 
     <div class="painel">
         <div class="vidas">
-            <img src="img/coracao_cheio.png" alt="coracao_cheio">
-            <img src="img/coracao_cheio.png" alt="coracao_cheio">
-            <img src="img/coracao_cheio.png" alt="coracao_cheio">
+            <img src="img/coracao_cheio.png" alt="coracao_cheio" id="v1" class="vida">
+            <img src="img/coracao_cheio.png" alt="coracao_cheio" id="v2" class="vida">
+            <img src="img/coracao_cheio.png" alt="coracao_cheio" id="v3" class="vida">
         </div>
         <div class="cronometro" id="cronometro">Tempo restante: ???</div>
+        <div class="pontuacao">
+            Pontos: <span id="pontos">0</span>
+        </div>
     </div>
 
     <script>
