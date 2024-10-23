@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo do Mosquito</title>
     <link rel="stylesheet" href="style/style.css">
-    
+
 </head>
 <body onresize="ajustaTamanhoTela()">
 
-    <script> randomizaPosicao() </script>
-    <script src="Script/script.js" defer type="text/javascript"></script>
+        <!-- Seção de seleção de dificuldade e botão começar -->
+        <div id="menuJogo">
+            <img src="img/game.png" alt="Imagem do jogo" class="imagem-I">
+            <label for="dificuldade" id="configuracaoJogo">Escolha a dificuldade:</label>
+            <select id="dificuldade">
+                <option value="facil">Fácil</option>
+                <option value="normal" selected>Normal</option>
+                <option value="dificil">Difícil</option>
+            </select>
+            
+            <button class="comecar" onclick="iniciarJogo()">Começar</button>
+        </div>
+
+    <script src="Script/script.js" defer></script>
 </body>
 </html>

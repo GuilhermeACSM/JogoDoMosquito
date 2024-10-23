@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Jogo do Mosquito</title>
+</head>
+<body onresize="ajustaTamanhoTela()">
+
+    <div class="painel">
+        <div class="vidas">
+            <img src="img/coracao_cheio.png" alt="coracao_cheio">
+            <img src="img/coracao_cheio.png" alt="coracao_cheio">
+            <img src="img/coracao_cheio.png" alt="coracao_cheio">
+        </div>
+        <div class="cronometro" id="cronometro">Tempo restante: ???</div>
+    </div>
+
+    <script>
+            setInterval (function(){(randomizaPosicao(), intervaloMosquito)}, 1000);
+    </script>
+    <script src="Script/script.js" defer></script>
+</body>
+</html>
