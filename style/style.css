@@ -80,7 +80,7 @@ select {
 
 .painel{
     position: absolute;
-    width: 190px;
+    width: 220px;
     padding: 10px;
     bottom: 10px;
     left: 0px;
@@ -88,7 +88,6 @@ select {
     background: rgba(255, 255, 255, 0.7)
 }
 .cronometro{
-    float: left;
     font-size: 20px;
     font-weight: bold;
 }

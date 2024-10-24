@@ -1,26 +1,25 @@
-let altura, largura = 0
-let intervaloMosquito = 2000
-let vidas = 1
-let tempo = 15
+let altura, largura = 0;
+let intervaloMosquito;
+let vidas = 1;
+let tempo = 15;
 let ponto = 0;
 
+let criarMosquito; // Variável para controlar o intervalo de criação dos mosquitos
 
 // ------------ TAMANHO DA TELA ------------- //
 function ajustaTamanhoTela() {
-    altura = window.innerHeight
-    largura = window.innerWidth
-    console.log(`Largura: ${largura}  Altura: ${altura}`)
+    altura = window.innerHeight;
+    largura = window.innerWidth;
 }
 
-ajustaTamanhoTela()
+ajustaTamanhoTela();
 
 // ------------ POSIÇÃO DO MOSQUITO NA TELA ------------- //
 function randomizaPosicao() {
 
     if (document.getElementById('mosquito')) {
-        document.getElementById('mosquito').remove()
+        document.getElementById('mosquito').remove();
 
-        // Aumenta a contagem de vidas e verifica se o jogo acabou
         if (vidas > 3) {
             window.location.href = 'fim_de_jogo.html';
         } else {
@@ -35,9 +34,6 @@ function randomizaPosicao() {
     posicaoX = posicaoX < 0 ? 0 : posicaoX;
     posicaoY = posicaoY < 0 ? 0 : posicaoY;
 
-    console.log(`Posição X: ${posicaoX}, Posição Y: ${posicaoY}`);
-
-    // Criar o elemento HTML do mosquito
     let mosquito = document.createElement('img');
     mosquito.src = '../img/mosquito.png';
     mosquito.className = 'mosquito1';
@@ -46,80 +42,65 @@ function randomizaPosicao() {
     mosquito.style.position = 'absolute';
     mosquito.id = 'mosquito';
 
-    // Adiciona um evento de clique no mosquito
     mosquito.onclick = function() {
-        ponto++; // Incrementa a pontuação
-        document.getElementById('pontos').innerHTML = ponto; // Atualiza a pontuação na tela
-        this.remove(); // Remove o mosquito clicado
-    }
+        ponto++;
+        document.getElementById('pontos').innerHTML = ponto;
+        this.remove();
+    };
 
-    // Verifica se atingiu 10 pontos
-    if (ponto >= 10) {
-        clearInterval(intervaloMosquito); // Para de gerar mosquitos
-        // Salva a pontuação no localStorage
+    if (ponto >= 5) {
+        clearInterval(criarMosquito);
         localStorage.setItem('pontos', ponto);
-        // Redireciona para a página de vitória
         window.location.href = 'vitoria.html';
     }
 
     document.body.appendChild(mosquito);
 }
 
-
 // ------------ DIFICULDADE ------------- //
-// Função para definir o intervalo com base na dificuldade selecionada
 function defineDificuldade() {
-    let dificuldade = document.getElementById('dificuldade').value;
+    let dificuldade = localStorage.getItem('dificuldade'); // Obtém a dificuldade salva
     switch (dificuldade) {
         case 'facil':
-            intervaloMosquito = 1500; // A cada 1,5 segundos
+            intervaloMosquito = 1500;
             break;
         case 'normal':
-            intervaloMosquito = 800; // A cada 0,8 segundos
+            intervaloMosquito = 1000;
             break;
         case 'dificil':
-            intervaloMosquito = 500; // A cada 0,5 segundo
+            intervaloMosquito = 600;
             break;
     }
-    console.log(`Dificuldade selecionada: ${dificuldade}, Intervalo: ${intervaloMosquito}`);
+
+    // Inicia o intervalo de criação dos mosquitos com base na dificuldade
+    criarMosquito = setInterval(randomizaPosicao, intervaloMosquito);
 }
 
 // ------------ CRONOMETRO ------------- //
-function iniciarCronometro() {
-    let cronometro = setInterval(function() {
-        tempo--;
-        document.getElementById('cronometro').innerHTML = tempo;
+let cronometro = setInterval(function() {
+    tempo--;
+    document.getElementById('cronometro').innerHTML = `Tempo restante: ${tempo}`;
 
-        // Se o tempo acabar, termina o jogo
-        if (tempo <= 0) {
-            clearInterval(cronometro); // Para o cronômetro
-            clearInterval(intervaloMosquito); // Para de gerar mosquitos
-            if (document.getElementById('mosquito')) {
-                document.getElementById('mosquito').remove(); // Remove o mosquito se existir
-            }
-            alert(`Tempo esgotado! Você fez ${ponto} pontos!`); // Mostra a pontuação final
-            
-            // Salva a pontuação no localStorage
-            localStorage.setItem('pontos', ponto);
-            // Redireciona para a página de vitória
-            window.location.href = 'index.html';
+    if (tempo <= 0) {
+        clearInterval(cronometro);
+        clearInterval(criarMosquito);
+        if (document.getElementById('mosquito')) {
+            document.getElementById('mosquito').remove();
         }
-    }, 1000); // Decrementa o tempo a cada segundo
-}
+        alert(`Tempo esgotado! Você fez ${ponto} pontos!`);
+        localStorage.setItem('pontos', ponto);
+        window.location.href = 'index.html';
+    }
+}, 1000);
 
 // ------------ INICIAR JOGO ------------- //
 function iniciarJogo() {
-    let dificuldade = document.getElementById('dificuldade').value; // Captura a dificuldade
-
-    // Salva a dificuldade no localStorage para a próxima página
+    let dificuldade = document.getElementById('dificuldade').value;
     localStorage.setItem('dificuldade', dificuldade);
-
-    // Redireciona para a nova página sem perder a dificuldade
     window.location.href = "pagJogo.html?dificuldade=" + dificuldade;
 }
 
-
 // ------------ REINICIAR JOGO ------------- //
 function reiniciar() {
-    window.location.href = "index.html"
+    window.location.href = "index.html";
 }
