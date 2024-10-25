@@ -1,14 +1,23 @@
-Jogo Mata Mosquito
-![image](https://github.com/user-attachments/assets/beabea79-7b44-4fed-85a7-f4d54f475fad)
-Este é o repositório do jogo Mata Mosquito! O objetivo é simples: clique nos mosquitos que aparecem aleatoriamente na tela antes que eles escapem. O jogo se torna mais desafiador à medida que os mosquitos aparecem mais rápido e em posições diferentes.
+# 🦟 Jogo Mata Mosquito
 
-Funcionalidades
-Mosquitos aparecem em posições aleatórias da tela.
-Cada mosquito aparece com uma rotação e tamanho ligeiramente variados.
-Contagem de vidas e pontuação.
-Três níveis de dificuldade: fácil, normal e difícil.
-Cronômetro para controle de tempo e final de jogo.
-Tecnologias Utilizadas
-HTML: estrutura da página.
-CSS: estilização dos elementos da página.
-JavaScript: lógica de geração aleatória de mosquitos, controle do tempo, pontuação e dificuldade.
+Bem-vindo ao jogo **Mata Mosquito**! O objetivo é simples: clique nos mosquitos que aparecem aleatoriamente na tela antes que eles escapem. O jogo se torna mais desafiador à medida que os mosquitos aparecem mais rápido e em posições diferentes.
+
+![image](https://github.com/user-attachments/assets/a4d690eb-7e3d-43d2-aca8-9fb088de4edc)
+
+---
+
+## 🚀 Funcionalidades
+
+- 🦟 **Aparição Aleatória**: Mosquitos aparecem em posições aleatórias da tela.
+- 🔄 **Rotação e Tamanho Variados**: Cada mosquito aparece com uma rotação e tamanho ligeiramente diferentes.
+- ❤️ **Vidas e Pontuação**: Mantenha suas vidas e acumule pontos ao acertar os mosquitos.
+- 🎮 **Níveis de Dificuldade**: Três níveis para escolher - fácil, normal e difícil.
+- ⏰ **Cronômetro**: Controle do tempo e final de jogo para aumentar o desafio.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **HTML**: Estrutura da página.
+- **CSS**: Estilização dos elementos da página.
+- **JavaScript**: Lógica de geração aleatória de mosquitos, controle de tempo, pontuação e dificuldade.
