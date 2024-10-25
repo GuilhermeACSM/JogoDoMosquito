@@ -42,6 +42,14 @@ function randomizaPosicao() {
     mosquito.style.position = 'absolute';
     mosquito.id = 'mosquito';
 
+    // Variar o tamanho do mosquito aleatoriamente
+    let tamanho = Math.floor(Math.random() * 3); // Valores 0, 1 ou 2
+    mosquito.className = `mosquito${tamanho}`;
+
+    // Aplicar rotação aleatória entre -45 e 45 graus
+    let rotacao = Math.floor(Math.random() * 90) - 45;
+    mosquito.style.transform = `rotate(${rotacao}deg)`;
+
     mosquito.onclick = function() {
         ponto++;
         document.getElementById('pontos').innerHTML = ponto;
