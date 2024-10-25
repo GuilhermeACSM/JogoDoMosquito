@@ -97,7 +97,7 @@ let cronometro = setInterval(function() {
 function iniciarJogo() {
     let dificuldade = document.getElementById('dificuldade').value;
     localStorage.setItem('dificuldade', dificuldade);
-    window.location.href = "pagJogo.html?dificuldade=" + dificuldade;
+    window.location.href = `pagJogo.html?dificuldade= ${dificuldade}`;
 }
 
 // ------------ REINICIAR JOGO ------------- //
