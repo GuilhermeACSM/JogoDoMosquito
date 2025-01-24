@@ -1,23 +1,24 @@
-# 🦟 Jogo Mata Mosquito
+# 🦟 Mosquito Slayer Game
 
-Bem-vindo ao jogo **Mata Mosquito**! O objetivo é simples: clique nos mosquitos que aparecem aleatoriamente na tela antes que eles escapem. O jogo se torna mais desafiador à medida que os mosquitos aparecem mais rápido e em posições diferentes.
+Welcome to the **Mosquito Slayer** game! The goal is simple: click on the mosquitoes that randomly appear on the screen before they escape. The game becomes more challenging as mosquitoes appear faster and in different positions.
 
 ![image](https://github.com/user-attachments/assets/a4d690eb-7e3d-43d2-aca8-9fb088de4edc)
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 Features
 
-- 🦟 **Aparição Aleatória**: Mosquitos aparecem em posições aleatórias da tela.
-- 🔄 **Rotação e Tamanho Variados**: Cada mosquito aparece com uma rotação e tamanho ligeiramente diferentes.
-- ❤️ **Vidas e Pontuação**: Mantenha suas vidas e acumule pontos ao acertar os mosquitos.
-- 🎮 **Níveis de Dificuldade**: Três níveis para escolher - fácil, normal e difícil.
-- ⏰ **Cronômetro**: Controle do tempo e final de jogo para aumentar o desafio.
+- 🦟 **Random Appearance**: Mosquitoes appear at random positions on the screen.
+- 🔄 **Rotation and Varied Size**: Each mosquito appears with slightly different rotation and size.
+- ❤️ **Lives and Score**: Keep your lives and accumulate points by hitting the mosquitoes.
+- 🎮 **Difficulty Levels**: Three levels to choose from - easy, normal, and hard.
+- ⏰ **Timer**: Time control and game over to increase the challenge.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
-- **HTML**: Estrutura da página.
-- **CSS**: Estilização dos elementos da página.
-- **JavaScript**: Lógica de geração aleatória de mosquitos, controle de tempo, pontuação e dificuldade.
+- **HTML**: Page structure.
+- **CSS**: Styling of the page elements.
+- **JavaScript**: Logic for random mosquito generation, time control, scoring, and difficulty.
+
